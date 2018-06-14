@@ -1,0 +1,9 @@
+<content-header name="Dashboard" small="Versão de teste"></content-header>
+<section class="content" ng-controller="DashboardCtrl as ctrl">
+    <value-box grid="12 6" color-class="bg-green" icon-class="fa-car" 
+        value="{{ctrl.cars}}" text="Total de carros">
+    </value-box>    
+    <value-box grid="12 6" color-class="bg-red" icon-class="fa-pie-chart"
+        value="{{ctrl.max_brand}}" optional-value="{{ctrl.total_vehicles}}" text="Marca com mais carros">
+    </value-box>
+</section>

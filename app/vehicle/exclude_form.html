@@ -1,0 +1,16 @@
+<div role="form">
+    <div class="box-body">
+        <field id="brand" label="Marca" grid="12 6 6 6" placeholder="Selecione uma marca"
+                model="vhCtrl.vehicle.brand" readonly="vhCtrl.tabDelete"></field>
+        <field id="brand" label="Modelo" grid="12 6 6 6" placeholder="Selecione um modelo" 
+                model="vhCtrl.vehicle.model" readonly="vhCtrl.tabDelete"></field>
+        <field id="brand" label="Especificações" grid="12" placeholder="Selecione as especificações" 
+                model="vhCtrl.vehicle.specifications" readonly="vhCtrl.tabDelete"></field>                         
+    </div>
+    <div class="box-footer">
+        <button class="btn btn-primary" ng-if="vhCtrl.tabCreate" ng-click="vhCtrl.create()">Incluir</button>
+        <button class="btn btn-info" ng-if="vhCtrl.tabUpdate" ng-click="vhCtrl.update()">Alterar</button>
+        <button class="btn btn-danger" ng-if="vhCtrl.tabDelete" ng-click="vhCtrl.delete()">Excluir</button>
+        <button class="btn btn-default" ng-click="vhCtrl.refresh()">Cancelar</button>
+    </div>
+</div>

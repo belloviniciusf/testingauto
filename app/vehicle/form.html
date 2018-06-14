@@ -1,0 +1,30 @@
+<div role="form">
+    <div class="box-body">          
+        <selector id="brand" label="Marca" grid="12 6 6 6" placeholder="Selecione ou pesquisa uma marca"
+            model="vhCtrl.vehicle.brand.selected" readonly="vhCtrl.brands" 
+            groupby = "vhCtrl.groupByType" filter="vhCtrl.reverseOrderFilter"
+            itemselected="vhCtrl.brandSelected()" show="vhCtrl.showBrand"></selector>                            
+        <selector id="model" label="Modelo" grid="12 6 6 6" placeholder="Selecione ou pesquise um modelo"
+            model="vhCtrl.vehicle.model.selected" readonly="vhCtrl.models"
+            itemselected="vhCtrl.modelSelected()" show="vhCtrl.showModel" ></selector>        
+        <selector id="minYear" label="De" grid="6 6 3" placeholder="Ano mínimo"
+            model="vhCtrl.minYear.selected" readonly="vhCtrl.years" itemselected="vhCtrl.modelSelected()"></selector>
+        <selector id="maxYear" label="Até" grid="6 6 3" placeholder="Ano máximo"
+            model="vhCtrl.maxYear.selected" readonly="vhCtrl.years" itemselected="vhCtrl.modelSelected()"></selector>        
+        <selector id="specifications" label="Especificações" grid="12 12 6 6" 
+            placeholder="Escolha as especificações" 
+            model="vhCtrl.vehicle.specifications.selected"
+            readonly="vhCtrl.specifications" 
+            itemselected="vhCtrl.specificationsSelected()" 
+            show="vhCtrl.showSpecifications"></selector>                                         
+    </div>
+    <div class="box-footer">
+        <button class="btn btn-primary" ng-if="vhCtrl.tabCreate"
+         ng-click="vhCtrl.create()">Incluir</button>
+        <button class="btn btn-info" ng-if="vhCtrl.tabUpdate"
+        ng-click="vhCtrl.update()">Alterar</button>
+        <button class="btn btn-danger" ng-if="vhCtrl.tabDelete"
+        ng-click="vhCtrl.delete()">Excluir</button>
+        <button class="btn btn-default" ng-click="vhCtrl.refresh()">Cancelar</button>
+    </div>
+</div>
